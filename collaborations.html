@@ -3,130 +3,50 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Xin Liu • Collaborations</title>
-  <meta name="description" content="Xin Liu — international collaborations." />
-  <link rel="icon" href="assets/images/profile.png" />
-  <link rel="stylesheet" href="assets/css/style.css" />
-
-  <!-- Page-only styles (so you don't need to touch style.css) -->
-  <style>
-    .page-title{
-      margin: 52px 0 0;
-      text-align: center;
-      font-size: 2px;
-      letter-spacing: .10em;
-      text-transform: uppercase;
-      color: #111827;
-    }
-    .page-subtitle{
-      margin: 10px 0 0;
-      text-align: center;
-      color: #6b7280;
-      font-size: 14px;
-      line-height: 1.8;
-    }
-
-    .map-card{
-      position: relative;
-      max-width: 960px;
-      margin: 22px auto 0;
-    }
-    .world-map{
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 10px;
-      border: 1px solid #e5e7eb;
-      background: #fff;
-    }
-    .map-overlay{
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      display:block;
-    }
-
-    .network-list-card{
-      max-width: 920px;
-      margin: 22px auto 0;
-      border: 1px solid #e5e7eb;
-      border-radius: 12px;
-      padding: 18px 20px;
-      background: #fff;
-      text-align: center;
-    }
-    .section-title{
-      margin: 0 0 10px;
-      font-size: 14px;
-      letter-spacing: .20em;
-      text-transform: uppercase;
-      color: #111827;
-    }
-    .network-list{
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      line-height: 1.9;
-      color: #111827;
-      font-size: 14px;
-    }
-    .network-list li{ margin: 2px 0; }
-
-    .footer-note{
-      margin-top: 26px;
-      color: #6b7280;
-      font-size: 12px;
-      text-align: center;
-    }
-  </style>
-</head>
-
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Xin Liu • Collaborations</title>
-  <meta name="description" content="Xin Liu — international collaborations." />
-  <link rel="icon" href="assets/images/profile.png" />
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <title>Collaborations | Liu Xin</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
   <main class="wrap">
-    <nav class="pillnav" aria-label="Sections">
-      <a class="" href="index.html">Home</a>
-      <a class="" href="academic career.html">Academic Career</a>
-      <a class="" href="projects-and-grants.html">Projects and Grants</a>
-      <a class="" href="publications.html">Publications</a>
-      <a class="" href="awards.html">Awards</a>
-      <a class="" href="presentations.html">Presentations</a>
-      <a class="" href="teaching.html">Teaching</a>
-      <a class="" href="supervision.html">Supervision</a>
-      <a class="" href="academic-service.html">Academic Service</a>
-      <a class="active" href="collaborations.html">Collaborations</a>
+
+    <!-- TOP MENU -->
+    <nav class="pillnav" aria-label="Primary">
+      <a href="index.html"><span class="en">Home</span></a>
+      <a href="academic.html"><span class="en">Academic Career</span></a>
+      <a href="projects.html"><span class="en">Projects and Grants</span></a>
+      <a href="publications.html"><span class="en">Publications</span></a>
+      <a href="awards.html"><span class="en">Awards</span></a>
+      <a href="presentations.html"><span class="en">Presentations</span></a>
+      <a href="teaching.html"><span class="en">Teaching</span></a>
+      <a href="supervision.html"><span class="en">Supervision</span></a>
+      <a href="service.html"><span class="en">Academic Service</span></a>
+      <a href="collaborations.html" class="active"><span class="en">Collaborations</span></a>
     </nav>
 
     <div class="rule" aria-hidden="true"></div>
 
-    <section class="page">
-      <h2 class="page-title">COLLABORATIONS</h2>
-      <p class="page-subtitle">International collaboration footprint starting from Ningbo, China.</p>
+    <h1 class="page-title">COLLABORATIONS</h1>
+    <p class="page-subtitle">International collaboration footprint starting from Ningbo, China.</p>
 
-      <div class="map-card" aria-label="Collaboration map">
-        <div class="map-wrap" id="mapWrap">
-          <!-- ✅ 改这里：换成你自己的世界地图底图文件名/路径 -->
-          <img id="worldMap" src="assets/images/map.png" alt="map" />
-
-          <!-- overlay svg -->
-          <svg id="mapSvg" aria-hidden="true"></svg>
-        </div>
+    <!-- MAP CARD -->
+    <section class="card" aria-label="Collaboration map">
+      <div class="map-wrap">
+        <!-- IMPORTANT: do NOT use object-fit:cover anywhere on this image -->
+        <img
+          id="worldMap"
+          class="map-img"
+          src="assets/images/map.png"
+          alt="World map"
+        />
+        <svg id="mapSvg" class="map-overlay" aria-hidden="true"></svg>
       </div>
+    </section>
 
-      <h3 class="list-title">Key collaboration countries/regions</h3>
-      <ul class="collab-list" aria-label="Key collaboration countries/regions list">
+    <!-- LIST CARD -->
+    <section class="card" aria-label="Key collaboration countries/regions">
+      <h2 class="subsection-title">Key collaboration countries/regions</h2>
+      <ul class="country-list">
         <li>Sweden</li>
         <li>Norway</li>
         <li>Finland</li>
@@ -142,6 +62,7 @@
       </ul>
     </section>
 
+    <!-- CONTACT (keep your original block) -->
     <div class="rule" aria-hidden="true"></div>
 
     <h2 class="contact-title">Contact</h2>
@@ -182,169 +103,151 @@
     </div>
 
     <div class="booking">
-      <a class="book-btn" href="mailto:liuxin2@nbu.edu.cn?subject=Meeting%20Request%20%7C%20%E9%A2%84%E7%BA%A6%E6%B2%9F%E9%80%9A&body=Hello%20Prof.%20Liu%2C%0A%0AI%20would%20like%20to%20request%20a%20meeting.%20My%20topic%3A%20%5B...%5D.%0APreferred%20time%20slots%3A%20%5B...%5D.%0A%0A%E5%88%98%E8%80%81%E5%B8%88%E6%82%A8%E5%A5%BD%EF%BC%8C%0A%0A%E6%88%91%E6%83%B3%E9%A2%84%E7%BA%A6%E6%B2%9F%E9%80%9A%EF%BC%8C%E4%B8%BB%E9%A2%98%EF%BC%9A%5B...%5D%EF%BC%8C%E5%8F%AF%E9%80%89%E6%97%B6%E9%97%B4%EF%BC%9A%5B...%5D%EF%BC%8C%E8%B0%A2%E8%B0%A2%EF%BC%81"
+      <a class="book-btn"
+         href="mailto:liuxin2@nbu.edu.cn?subject=Meeting%20Request%20%7C%20%E9%A2%84%E7%BA%A6%E6%B2%9F%E9%80%9A&body=Hello%20Prof.%20Liu%2C%0A%0AI%20would%20like%20to%20request%20a%20meeting.%20My%20topic%3A%20%5B...%5D.%0APreferred%20time%20slots%3A%20%5B...%5D.%0A%0A%E5%88%98%E8%80%81%E5%B8%88%E6%82%A8%E5%A5%BD%EF%BC%8C%0A%0A%E6%88%91%E6%83%B3%E9%A2%84%E7%BA%A6%E6%B2%9F%E9%80%9A%EF%BC%8C%E4%B8%BB%E9%A2%98%EF%BC%9A%5B...%5D%EF%BC%8C%E5%8F%AF%E9%80%89%E6%97%B6%E9%97%B4%EF%BC%9A%5B...%5D%EF%BC%8C%E8%B0%A2%E8%B0%A2%EF%BC%81"
          aria-label="Book a time / 预约时间">
         <span class="book-en">Request a meeting</span>
         <span class="book-cn">预约交流</span>
       </a>
     </div>
 
-    </p>
     <div class="rule" aria-hidden="true"></div>
     <p class="footer-note"><a href="index.html">Back to Home</a></p>
 
   </main>
 
   <script>
-    // =========================
-    // 关键：这里是“对齐修正”
-    // 你的底图有边框/留白，所以要用 bounds 映射“有效地图区域”
-    // 如果宁波还是偏到日本：把 left 增大、right 减小（例如 0.06→0.08, 0.94→0.92）
-    // =========================
-    const MAP_BOUNDS = {
-      left: 0.06,   // ✅ 横向留白（越大：点越往中间收）
-      right: 0.94,
-      top: 0.08,    // ✅ 纵向留白
-      bottom: 0.92
-    };
+    (() => {
+      const img = document.getElementById("worldMap");
+      const svg = document.getElementById("mapSvg");
+      const NS = "http://www.w3.org/2000/svg";
 
-    const home = { name: "Ningbo", lat: 29.8683, lon: 121.5440 };
+      /* ===========
+         Alignment knobs
+         If the Ningbo point looks slightly east/west or high/low,
+         only tweak these numbers (NOT the coordinates).
+         =========== */
+      const LON_SHIFT = 0;   // degrees. Try -2, -3 if it looks too far east (toward Japan).
+      const LAT_MAX = 84;    // top latitude shown by your map image
+      const LAT_MIN = -58;   // bottom latitude shown by your map image
 
-    // 按你要求的顺序（国家顺序），每个国家用一个代表城市坐标做落点
-    const points = [
-      { country: "Sweden",         city: "Gothenburg",   lat: 57.7089, lon: 11.9746 },
-      { country: "Norway",         city: "Oslo",         lat: 59.9139, lon: 10.7522 },
-      { country: "Finland",        city: "Helsinki",     lat: 60.1699, lon: 24.9384 },
-      { country: "Belgium",        city: "Ghent",        lat: 51.0543, lon: 3.7174  },
-      { country: "Germany",        city: "Hamburg",      lat: 53.5511, lon: 9.9937  },
-      { country: "Netherlands",    city: "Amsterdam",    lat: 52.3676, lon: 4.9041  },
-      { country: "Portugal",       city: "Lisbon",       lat: 38.7223, lon: -9.1393 },
-      { country: "Serbia",         city: "Belgrade",     lat: 44.7866, lon: 20.4489 },
-      { country: "Estonia",        city: "Tallinn",      lat: 59.4370, lon: 24.7536 },
-      { country: "United Kingdom", city: "Reading",      lat: 51.4543, lon: -0.9781 },
-      { country: "United States",  city: "Iowa City",    lat: 41.6611, lon: -91.5302},
-      { country: "Singapore",      city: "Singapore",    lat: 1.3521,  lon: 103.8198}
-    ];
+      const origin = { name: "Ningbo", lat: 29.8683, lon: 121.5440 };
 
-    const img = document.getElementById("worldMap");
-    const svg = document.getElementById("mapSvg");
+      // Use representative city coordinates (capitals) for each country
+      const targets = [
+        { name: "Sweden",         lat: 59.3293, lon: 18.0686 },    // Stockholm
+        { name: "Norway",         lat: 59.9139, lon: 10.7522 },    // Oslo
+        { name: "Finland",        lat: 60.1699, lon: 24.9384 },    // Helsinki
+        { name: "Belgium",        lat: 50.8503, lon: 4.3517 },     // Brussels
+        { name: "Germany",        lat: 52.5200, lon: 13.4050 },    // Berlin
+        { name: "Netherlands",    lat: 52.3676, lon: 4.9041 },     // Amsterdam
+        { name: "Portugal",       lat: 38.7223, lon: -9.1393 },    // Lisbon
+        { name: "Serbia",         lat: 44.7866, lon: 20.4489 },    // Belgrade
+        { name: "Estonia",        lat: 59.4370, lon: 24.7536 },    // Tallinn
+        { name: "United Kingdom", lat: 51.5074, lon: -0.1278 },    // London
+        { name: "United States",  lat: 38.9072, lon: -77.0369 },   // Washington, DC
+        { name: "Singapore",      lat: 1.3521,  lon: 103.8198 }    // Singapore
+      ];
 
-    function project(lon, lat, W, H) {
-      const x0 = W * MAP_BOUNDS.left;
-      const x1 = W * MAP_BOUNDS.right;
-      const y0 = H * MAP_BOUNDS.top;
-      const y1 = H * MAP_BOUNDS.bottom;
+      function clearSvg() {
+        while (svg.firstChild) svg.removeChild(svg.firstChild);
+      }
 
-      const x = x0 + ((lon + 180) / 360) * (x1 - x0);
-      const y = y0 + ((90 - lat) / 180) * (y1 - y0);
-      return { x, y };
-    }
+      function draw() {
+        const w = img.naturalWidth;
+        const h = img.naturalHeight;
+        if (!w || !h) return;
 
-    function clearSvg() {
-      while (svg.firstChild) svg.removeChild(svg.firstChild);
-    }
+        svg.setAttribute("viewBox", `0 0 ${w} ${h}`);
+        svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
+        clearSvg();
 
-    function el(name, attrs = {}) {
-      const n = document.createElementNS("http://www.w3.org/2000/svg", name);
-      Object.entries(attrs).forEach(([k, v]) => n.setAttribute(k, v));
-      return n;
-    }
+        // Arrow marker
+        const defs = document.createElementNS(NS, "defs");
+        const marker = document.createElementNS(NS, "marker");
+        marker.setAttribute("id", "arrow");
+        marker.setAttribute("viewBox", "0 0 10 10");
+        marker.setAttribute("refX", "9");
+        marker.setAttribute("refY", "5");
+        marker.setAttribute("markerWidth", "6");
+        marker.setAttribute("markerHeight", "6");
+        marker.setAttribute("orient", "auto");
 
-    function draw() {
-      const rect = img.getBoundingClientRect();
-      const W = rect.width;
-      const H = rect.height;
+        const arrow = document.createElementNS(NS, "path");
+        arrow.setAttribute("d", "M 0 0 L 10 5 L 0 10 z");
+        arrow.setAttribute("fill", "#94a3b8");
+        arrow.setAttribute("opacity", "0.75");
 
-      svg.setAttribute("width", W);
-      svg.setAttribute("height", H);
-      svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
-      svg.setAttribute("preserveAspectRatio", "none");
+        marker.appendChild(arrow);
+        defs.appendChild(marker);
+        svg.appendChild(defs);
 
-      clearSvg();
+        const lonToX = (lon) => ((lon + LON_SHIFT + 180) / 360) * w;
+        const latToY = (lat) => ((LAT_MAX - lat) / (LAT_MAX - LAT_MIN)) * h;
 
-      // defs: arrow marker
-      const defs = el("defs");
-      const marker = el("marker", {
-        id: "arrow",
-        markerWidth: "7",
-        markerHeight: "7",
-        refX: "6",
-        refY: "3.5",
-        orient: "auto",
-        markerUnits: "strokeWidth"
-      });
-      marker.appendChild(el("path", { d: "M0,0 L7,3.5 L0,7 Z", fill: "#9ca3af" }));
-      defs.appendChild(marker);
-      svg.appendChild(defs);
+        const x1 = lonToX(origin.lon);
+        const y1 = latToY(origin.lat);
 
-      const gLines = el("g");
-      const gDots = el("g");
-      const gLabels = el("g");
+        // Ningbo dot
+        const dot = document.createElementNS(NS, "circle");
+        dot.setAttribute("cx", x1);
+        dot.setAttribute("cy", y1);
+        dot.setAttribute("r", "3.2");
+        dot.setAttribute("fill", "#111827");
+        dot.setAttribute("opacity", "0.92");
+        svg.appendChild(dot);
 
-      const pHome = project(home.lon, home.lat, W, H);
+        // Ningbo label
+        const label = document.createElementNS(NS, "text");
+        label.textContent = origin.name;
+        label.setAttribute("x", x1 + 8);
+        label.setAttribute("y", y1 - 8);
+        label.setAttribute("font-size", "12");
+        label.setAttribute("font-family", "system-ui, -apple-system, Segoe UI, Roboto, Arial");
+        label.setAttribute("fill", "#111827");
+        svg.appendChild(label);
 
-      // lines + destination dots
-      points.forEach(p => {
-        const pDest = project(p.lon, p.lat, W, H);
+        // Arcs (no target dots)
+        targets.forEach((t) => {
+          const x2 = lonToX(t.lon);
+          const y2 = latToY(t.lat);
 
-        // curved path
-        const midX = (pHome.x + pDest.x) / 2;
-        const lift = Math.max(30, Math.abs(pDest.x - pHome.x) * 0.12);
-        const ctrlY = Math.min(pHome.y, pDest.y) - lift;
+          const dx = x2 - x1;
+          const dy = y2 - y1;
+          const dist = Math.hypot(dx, dy) || 1;
 
-        const d = `M ${pHome.x} ${pHome.y} Q ${midX} ${ctrlY} ${pDest.x} ${pDest.y}`;
-        const path = el("path", {
-          d,
-          fill: "none",
-          stroke: "#b6bcc6",
-          "stroke-width": "1.2",
-          "stroke-linecap": "round",
-          "marker-end": "url(#arrow)",
-          opacity: "0.95"
+          const mx = (x1 + x2) / 2;
+          const my = (y1 + y2) / 2;
+
+          const nx = -dy / dist;
+          const ny = dx / dist;
+
+          const lift = Math.min(95, Math.max(30, dist * 0.18));
+
+          let cx = mx + nx * lift;
+          let cy = my + ny * lift;
+
+          // Prefer upward arc (smaller y)
+          if (cy > my) {
+            cx = mx - nx * lift;
+            cy = my - ny * lift;
+          }
+
+          const path = document.createElementNS(NS, "path");
+          path.setAttribute("d", `M ${x1} ${y1} Q ${cx} ${cy} ${x2} ${y2}`);
+          path.setAttribute("fill", "none");
+          path.setAttribute("stroke", "#94a3b8");
+          path.setAttribute("stroke-width", "1.4");
+          path.setAttribute("stroke-linecap", "round");
+          path.setAttribute("opacity", "0.75");
+          path.setAttribute("marker-end", "url(#arrow)");
+          svg.appendChild(path);
         });
-        gLines.appendChild(path);
+      }
 
-        const dot = el("circle", {
-          cx: pDest.x,
-          cy: pDest.y,
-          r: "3.2",
-          fill: "#374151",
-          opacity: "0.95"
-        });
-        gDots.appendChild(dot);
-      });
-
-      // home dot
-      const homeDot = el("circle", {
-        cx: pHome.x, cy: pHome.y, r: "4.2",
-        fill: "#111827"
-      });
-      gDots.appendChild(homeDot);
-
-      // home label
-      const label = el("text", {
-        x: pHome.x + 10,
-        y: pHome.y - 10,
-        fill: "#111827",
-        "font-size": "12",
-        "font-family": "system-ui, -apple-system, Segoe UI, Roboto, Arial"
-      });
-      label.textContent = "Ningbo";
-      gLabels.appendChild(label);
-
-      svg.appendChild(gLines);
-      svg.appendChild(gDots);
-      svg.appendChild(gLabels);
-    }
-
-    function ready() {
-      draw();
-      window.addEventListener("resize", draw);
-    }
-
-    if (img.complete) ready();
-    else img.addEventListener("load", ready);
+      if (img.complete) draw();
+      else img.addEventListener("load", draw);
+    })();
   </script>
-
 </body>
 </html>
