@@ -4,87 +4,68 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Xin Liu • Collaborations</title>
-  <meta name="description" content="Xin Liu — international collaborations." />
+  <meta name="description" content="Xin Liu — international collaborations and academic network." />
   <link rel="icon" href="assets/images/profile.png" />
   <link rel="stylesheet" href="assets/css/style.css" />
 
-  <!-- Page-only styles (so you don't need to touch style.css) -->
+  <!-- Page-only styles (map layout). Keep or move into style.css -->
   <style>
-    .page-title{
-      margin: 52px 0 0;
-      text-align: center;
-      font-size: 26px;
-      letter-spacing: .10em;
-      text-transform: uppercase;
-      color: #111827;
-    }
-    .page-subtitle{
-      margin: 10px 0 0;
-      text-align: center;
-      color: #6b7280;
-      font-size: 14px;
-      line-height: 1.8;
-    }
+    .page-title{ margin: 52px 0 0; font-size: 26px; letter-spacing: .10em; text-transform: uppercase; color:#111827; }
+    .page-subtitle{ margin: 10px auto 0; max-width: 760px; color:#6b7280; font-size: 14px; line-height: 1.8; }
 
     .map-card{
-      position: relative;
-      max-width: 960px;
       margin: 22px auto 0;
+      width: min(920px, 100%);
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      background: #fff;
+      padding: 14px;
+    }
+    .map-wrap{
+      position: relative;
+      width: 100%;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid #e5e7eb;
+      background: #f3f4f6;
     }
     .world-map{
       width: 100%;
       height: auto;
       display: block;
-      border-radius: 10px;
-      border: 1px solid #e5e7eb;
-      background: #fff;
     }
     .map-overlay{
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      display:block;
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      pointer-events:none;
     }
 
-    .network-list-card{
-      max-width: 920px;
-      margin: 22px auto 0;
-      border: 1px solid #e5e7eb;
-      border-radius: 12px;
-      padding: 18px 20px;
-      background: #fff;
-      text-align: center;
+    .key-list{
+      margin: 18px auto 0;
+      width: min(920px, 100%);
+      text-align: left;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px 18px;
+      padding: 0 6px;
     }
-    .section-title{
-      margin: 0 0 10px;
+    .key-list li{
+      margin-left: 18px;
+      color:#111827;
       font-size: 14px;
-      letter-spacing: .20em;
-      text-transform: uppercase;
-      color: #111827;
+      line-height: 1.8;
     }
-    .network-list{
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      line-height: 1.9;
-      color: #111827;
-      font-size: 14px;
-    }
-    .network-list li{ margin: 2px 0; }
-
-    .footer-note{
-      margin-top: 26px;
-      color: #6b7280;
-      font-size: 12px;
-      text-align: center;
+    @media (max-width:860px){
+      .key-list{ grid-template-columns: 1fr; }
     }
   </style>
 </head>
 
 <body>
   <main class="wrap">
+
     <nav class="pillnav" aria-label="Sections">
       <a class="" href="index.html">Home</a>
       <a class="" href="academic career.html">Academic Career</a>
@@ -101,22 +82,28 @@
     <div class="rule" aria-hidden="true"></div>
 
     <h1 class="page-title">COLLABORATIONS</h1>
-    <p class="page-subtitle">International collaboration footprint starting from Ningbo, China.</p>
+    <p class="page-subtitle">
+      International collaboration footprint starting from Ningbo, China.
+    </p>
 
-    <div class="map-card" aria-label="World map collaboration network">
-      <!-- 你也可以换成本地图片：assets/images/world-map.png -->
-      <img
-        class="world-map"
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/BlankMap-World-Equirectangular.svg/960px-BlankMap-World-Equirectangular.svg.png"
-        alt="World map"
-        loading="lazy"
-      />
-      <svg id="collabMap" class="map-overlay" viewBox="0 0 960 406" aria-hidden="true"></svg>
-    </div>
+    <div class="map-card" aria-label="International collaboration map">
+      <div class="map-wrap">
+        <!-- If you want to use a local map image, replace src with your file, e.g. assets/images/world.png -->
+        <img
+          id="worldMapImg"
+          class="world-map"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/BlankMap-World-Equirectangular.svg/1200px-BlankMap-World-Equirectangular.svg.png"
+          alt="World map"
+          loading="lazy"
+        />
+        <svg id="collabMap" class="map-overlay" aria-hidden="true" preserveAspectRatio="none"></svg>
+      </div>
 
-    <div class="network-list-card">
-      <h2 class="section-title">Key Collaboration Countries/Regions</h2>
-      <ul class="network-list">
+      <h2 style="margin:18px 0 8px; font-size:14px; letter-spacing:.35em; text-transform:uppercase; color:#374151;">
+        KEY COLLABORATION COUNTRIES/REGIONS
+      </h2>
+
+      <ul class="key-list" aria-label="Key collaboration countries/regions">
         <li>Norway</li>
         <li>Sweden</li>
         <li>Finland</li>
@@ -132,7 +119,6 @@
       </ul>
     </div>
 
-    <!-- Contact (每页统一放底部) -->
     <div class="rule" aria-hidden="true"></div>
 
     <h2 class="contact-title">Contact</h2>
@@ -140,11 +126,15 @@
 
     <div class="icons" aria-label="Contact links">
       <a class="icon" href="mailto:liuxin2@nbu.edu.cn" aria-label="Email">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"/></svg>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"/>
+        </svg>
       </a>
 
       <a class="icon" href="https://jsjy.nbu.edu.cn/info/1059/110251.htm" target="_blank" rel="noreferrer" aria-label="Ningbo University Profile">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3Zm0 14L5 13.2V16c0 2.2 3.1 4 7 4s7-1.8 7-4v-2.8L12 17Z"/></svg>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3Zm0 14L5 13.2V16c0 2.2 3.1 4 7 4s7-1.8 7-4v-2.8L12 17Z"/>
+        </svg>
       </a>
 
       <a class="icon icon-rg" href="https://www.researchgate.net/profile/Xin-Liu-27" target="_blank" rel="noreferrer" aria-label="ResearchGate">
@@ -156,11 +146,15 @@
       </a>
 
       <a class="icon" href="https://orcid.org/0000-0002-2314-9786" target="_blank" rel="noreferrer" aria-label="ORCID">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.2 3.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4Zm-2 4h4v13h-4v-13Zm7 0h5.3c4 0 6.5 2.5 6.5 6.5s-2.5 6.5-6.5 6.5H12.2v-13Zm4.9 10.1c1.8 0 3-1.2 3-3.6s-1.2-3.6-3-3.6h-.9v7.2h.9Z"/></svg>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M7.2 3.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4Zm-2 4h4v13h-4v-13Zm7 0h5.3c4 0 6.5 2.5 6.5 6.5s-2.5 6.5-6.5 6.5H12.2v-13Zm4.9 10.1c1.8 0 3-1.2 3-3.6s-1.2-3.6-3-3.6h-.9v7.2h.9Z"/>
+        </svg>
       </a>
 
       <a class="icon" href="https://www.linkedin.com/in/xin-liu-aa878a110/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5A2.48 2.48 0 1 1 5 8.46 2.48 2.48 0 0 1 4.98 3.5ZM3 21h4V9H3v12Zm7 0h4v-6.2c0-1.7.03-3.9 2.4-3.9 2.4 0 2.4 1.9 2.4 4V21h4v-6.9c0-4-0.9-7.1-5.6-7.1-2.2 0-3.7 1.2-4.3 2.3h-.1V9h-3.8v12Z"/></svg>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4.98 3.5A2.48 2.48 0 1 1 5 8.46 2.48 2.48 0 0 1 4.98 3.5ZM3 21h4V9H3v12Zm7 0h4v-6.2c0-1.7.03-3.9 2.4-3.9 2.4 0 2.4 1.9 2.4 4V21h4v-6.9c0-4-0.9-7.1-5.6-7.1-2.2 0-3.7 1.2-4.3 2.3h-.1V9h-3.8v12Z"/>
+        </svg>
       </a>
     </div>
 
@@ -173,105 +167,126 @@
       </a>
     </div>
 
-    <!-- 按你要求：加 Back to Home -->
     <div class="rule" aria-hidden="true"></div>
     <p class="footer-note"><a href="index.html">Back to Home</a></p>
+
   </main>
 
   <script>
-    // ====== Robust map drawing (no CSS dependency for lines) ======
     const svg = document.getElementById("collabMap");
-    const W = 960, H = 406;
+    const img = document.getElementById("worldMapImg");
 
-    function proj(lat, lon){
-      const x = (lon + 180) / 360 * W;
-      const y = (90 - lat) / 180 * H;
-      return {x, y};
+    function draw(){
+      const W = img.naturalWidth;
+      const H = img.naturalHeight;
+
+      // Overlay coordinate system = image pixel coordinate system
+      svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+      svg.innerHTML = "";
+
+      // Small padding compensation (tune if needed)
+      const padX = W * 0.012;
+      const padY = H * 0.035;
+      const innerW = W - padX * 2;
+      const innerH = H - padY * 2;
+
+      function proj(lat, lon){
+        const x = padX + (lon + 180) / 360 * innerW;
+        const y = padY + (90 - lat) / 180 * innerH;
+        return {x, y};
+      }
+
+      function arcPath(a, b){
+        const dx = b.x - a.x;
+        const dy = b.y - a.y;
+        const mx = (a.x + b.x) / 2;
+        const lift = Math.min(H * 0.28, H * 0.08 + Math.hypot(dx, dy) * 0.18);
+        const cy = Math.min(a.y, b.y) - lift;
+        return `M ${a.x.toFixed(1)} ${a.y.toFixed(1)} Q ${mx.toFixed(1)} ${cy.toFixed(1)} ${b.x.toFixed(1)} ${b.y.toFixed(1)}`;
+      }
+
+      // Arrow marker
+      const defs = document.createElementNS("http://www.w3.org/2000/svg","defs");
+      defs.innerHTML = `
+        <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5"
+                markerWidth="6" markerHeight="6" orient="auto">
+          <path d="M 0 0 L 10 5 L 0 10 z" fill="#9ca3af"></path>
+        </marker>
+      `;
+      svg.appendChild(defs);
+
+      const points = [
+        {name:"Ningbo, China", lat:29.8683, lon:121.5440, home:true},
+
+        {name:"Gothenburg, Sweden", lat:57.7089, lon:11.9746},
+        {name:"Oslo, Norway", lat:59.9139, lon:10.7522},
+        {name:"Helsinki, Finland", lat:60.1699, lon:24.9384},
+        {name:"Brussels, Belgium", lat:50.8503, lon:4.3517},
+        {name:"Belgrade, Serbia", lat:44.7866, lon:20.4489},
+        {name:"Tallinn, Estonia", lat:59.4370, lon:24.7536},
+        {name:"Lisbon, Portugal", lat:38.7223, lon:-9.1393},
+        {name:"Berlin, Germany", lat:52.5200, lon:13.4050},
+        {name:"London, United Kingdom", lat:51.5074, lon:-0.1278},
+        {name:"Washington, DC, USA", lat:38.9072, lon:-77.0369},
+        {name:"Singapore", lat:1.3521, lon:103.8198},
+        {name:"Amsterdam, Netherlands", lat:52.3676, lon:4.9041},      
+      ];
+
+      const home = points.find(p => p.home);
+      const A = proj(home.lat, home.lon);
+
+      const gLines = document.createElementNS("http://www.w3.org/2000/svg","g");
+      const gDots  = document.createElementNS("http://www.w3.org/2000/svg","g");
+      const gText  = document.createElementNS("http://www.w3.org/2000/svg","g");
+
+      // Lines
+      points.filter(p => !p.home).forEach(p=>{
+        const B = proj(p.lat, p.lon);
+
+        const path = document.createElementNS("http://www.w3.org/2000/svg","path");
+        path.setAttribute("d", arcPath(A, B));
+        path.setAttribute("fill","none");           // IMPORTANT: prevents the black blob
+        path.setAttribute("stroke","#9ca3af");
+        path.setAttribute("stroke-width","1.2");
+        path.setAttribute("opacity","0.75");
+        path.setAttribute("stroke-linecap","round");
+        path.setAttribute("marker-end","url(#arrow)");
+
+        gLines.appendChild(path);
+      });
+
+      // Dots + Ningbo label
+      points.forEach(p=>{
+        const P = proj(p.lat, p.lon);
+
+        const c = document.createElementNS("http://www.w3.org/2000/svg","circle");
+        c.setAttribute("cx", P.x);
+        c.setAttribute("cy", P.y);
+        c.setAttribute("r", p.home ? "4.6" : "3.0");
+        c.setAttribute("fill", p.home ? "#111827" : "#374151");
+        c.setAttribute("opacity", p.home ? "0.95" : "0.75");
+        gDots.appendChild(c);
+
+        if(p.home){
+          const t = document.createElementNS("http://www.w3.org/2000/svg","text");
+          t.setAttribute("x", P.x + 8);
+          t.setAttribute("y", P.y - 8);
+          t.setAttribute("font-size","12");
+          t.setAttribute("fill","#111827");
+          t.setAttribute("font-family","system-ui, -apple-system, Segoe UI, Roboto, Arial");
+          t.textContent = "Ningbo";
+          gText.appendChild(t);
+        }
+      });
+
+      svg.appendChild(gLines);
+      svg.appendChild(gDots);
+      svg.appendChild(gText);
     }
 
-    function arcPath(a, b){
-      const dx = b.x - a.x;
-      const dy = b.y - a.y;
-      const mx = (a.x + b.x) / 2;
-      const lift = Math.min(110, 35 + Math.hypot(dx, dy) * 0.18);
-      const cy = Math.min(a.y, b.y) - lift;
-      return `M ${a.x.toFixed(1)} ${a.y.toFixed(1)} Q ${mx.toFixed(1)} ${cy.toFixed(1)} ${b.x.toFixed(1)} ${b.y.toFixed(1)}`;
-    }
-
-    // arrow marker
-    const defs = document.createElementNS("http://www.w3.org/2000/svg","defs");
-    defs.innerHTML = `
-      <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5"
-              markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-        <path d="M 0 0 L 10 5 L 0 10 z" fill="#9ca3af"></path>
-      </marker>
-    `;
-    svg.appendChild(defs);
-
-    const points = [
-      {name:"Ningbo, China", lat:29.91042, lon:121.61722, home:true},
-
-      {name:"Oslo, Norway", lat:59.9139, lon:10.7522},
-      {name:"Gothenburg, Sweden", lat:57.7089, lon:11.9746},
-      {name:"Helsinki, Finland", lat:60.1699, lon:24.9384},
-      {name:"Tallinn, Estonia", lat:59.4370, lon:24.7536},
-      {name:"Belgrade, Serbia", lat:44.7866, lon:20.4489},
-      {name:"London, United Kingdom", lat:51.5074, lon:-0.1278},
-      {name:"Singapore", lat:1.3521, lon:103.8198},
-      {name:"Washington, DC, USA", lat:38.9072, lon:-77.0369},
-      {name:"Amsterdam, Netherlands", lat:52.3676, lon:4.9041},
-      {name:"Brussels, Belgium", lat:50.8503, lon:4.3517},
-      {name:"Berlin, Germany", lat:52.5200, lon:13.4050},
-      {name:"Lisbon, Portugal", lat:38.7223, lon:-9.1393},
-    ];
-
-    const home = points.find(p=>p.home);
-    const a = proj(home.lat, home.lon);
-
-    // Lines group
-    const gLines = document.createElementNS("http://www.w3.org/2000/svg","g");
-    // Points group
-    const gDots = document.createElementNS("http://www.w3.org/2000/svg","g");
-
-    points.filter(p=>!p.home).forEach(p=>{
-      const b = proj(p.lat, p.lon);
-
-      const path = document.createElementNS("http://www.w3.org/2000/svg","path");
-      path.setAttribute("d", arcPath(a,b));
-
-      // IMPORTANT: force styles so it won't turn into a black blob
-      path.setAttribute("fill","none");
-      path.setAttribute("stroke","#9ca3af");
-      path.setAttribute("stroke-width","1.2");
-      path.setAttribute("opacity","0.75");
-      path.setAttribute("stroke-linecap","round");
-      path.setAttribute("marker-end","url(#arrow)");
-
-      const title = document.createElementNS("http://www.w3.org/2000/svg","title");
-      title.textContent = `${home.name} → ${p.name}`;
-      path.appendChild(title);
-
-      gLines.appendChild(path);
-    });
-
-    points.forEach(p=>{
-      const pt = proj(p.lat, p.lon);
-      const c = document.createElementNS("http://www.w3.org/2000/svg","circle");
-      c.setAttribute("cx", pt.x);
-      c.setAttribute("cy", pt.y);
-      c.setAttribute("r", p.home ? "4.6" : "3.0");
-      c.setAttribute("fill", p.home ? "#111827" : "#374151");
-      c.setAttribute("opacity", p.home ? "0.95" : "0.75");
-
-      const title = document.createElementNS("http://www.w3.org/2000/svg","title");
-      title.textContent = p.name;
-      c.appendChild(title);
-
-      gDots.appendChild(c);
-    });
-
-    svg.appendChild(gLines);
-    svg.appendChild(gDots);
+    if (img.complete) draw();
+    else img.addEventListener("load", draw);
   </script>
+
 </body>
 </html>
