@@ -320,8 +320,8 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation M
 
 /* ===== Content pages (e.g., Publications) ===== */
 .page-title{
-  margin: 72px 0 0;     /* 大标题前空两行的感觉 */
-  font-size: 24px;
+  margin: 52px 0 0;     /* 大标题前空两行的感觉 */
+  font-size: 26px;
   letter-spacing: .10em;
   text-transform: uppercase;
   color: #111827;
