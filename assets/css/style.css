@@ -125,5 +125,105 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation M
   letter-spacing: .10em;
   color: #6b7280;
 }
+/* 页面头 */
+.page-title{
+  margin: 0;
+  font-size: 14px;
+  letter-spacing: .35em;
+  text-transform: uppercase;
+  color: #374151;
+  text-align: center;
+}
+
+.page-sub{
+  margin: 14px auto 0;
+  max-width: 820px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+/* 每个大分区 */
+.section{
+  margin: 46px auto 0;
+  max-width: 920px;
+  text-align: left; /* 关键：别再居中堆叠 */
+}
+
+.section-title{
+  margin: 0 0 16px;
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: .35em;
+  text-transform: uppercase;
+  color: #374151;
+}
+
+/* 时间线卡片 */
+.timeline{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.titem{
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 18px;
+  padding: 18px 18px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(17,24,39,.06);
+}
+
+.tdate{
+  font-size: 13px;
+  color: var(--muted);
+  letter-spacing: .06em;
+  padding-top: 2px;
+}
+
+/* 职位/学位行 */
+.trole{
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 6px;
+}
+
+.tplace{
+  font-size: 14px;
+  color: #374151;
+  margin: 0 0 10px;
+  line-height: 1.7;
+}
+
+/* 正文两端对齐：包含 bullet 内容 */
+.tcontent,
+.tcontent ul,
+.tcontent li{
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+
+.tcontent ul{
+  margin: 0;
+  padding-left: 18px;
+  color: #111827;
+}
+
+.tcontent li{
+  margin: 6px 0;
+  line-height: 1.75;
+}
+
+/* 手机端：单列更好看 */
+@media (max-width: 860px){
+  .titem{ grid-template-columns: 1fr; }
+  .tdate{ margin-bottom: 4px; }
+}
 
 
