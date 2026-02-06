@@ -226,4 +226,96 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation M
   .tdate{ margin-bottom: 4px; }
 }
 
+/* =========================
+   Page layout (Projects & Grants)
+   ========================= */
+.pagehead{
+  margin: 54px auto 18px;   /* 大标题前空两行的感觉 */
+  text-align: center;
+  max-width: 920px;
+}
+
+.pagetitle{
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  color: #111827;
+}
+
+.pagesubtitle{
+  margin: 14px auto 0;
+  max-width: 720px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+.cvsec{
+  max-width: 920px;
+  margin: 28px auto 0;
+}
+
+.sectitle{
+  margin: 40px 0 16px;
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: .30em;
+  text-transform: uppercase;
+  color: #374151;
+}
+
+.card{
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 18px 18px;
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(17,24,39,.05);
+  text-align: left;
+  margin: 14px 0;
+}
+
+.card-title{
+  margin: 0 0 6px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.card-meta{
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.card-text{
+  margin: 12px 0 0;
+  font-size: 14.5px;
+  line-height: 1.95;
+  color: #111827;
+
+  /* 两端对齐 */
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
+
+.badges{
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.badge{
+  font-size: 12px;
+  padding: 4px 10px;
+  border: 1px solid var(--pill-border);
+  border-radius: 999px;
+  background: #fff;
+  color: #374151;
+}
+
 
