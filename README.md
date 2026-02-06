@@ -1,17 +1,19 @@
-# Xin Liu — Diego-aligned single-page site (static)
+# Xin Liu — Diego-like home layout (static, multi-page)
 
-This is a lightweight static site for GitHub Pages, aligned with the section naming & order used on diegocampos.co:
-Home, About, Projects, Publications, Awards and Grants, Presentations, Teaching, Supervision, Academic Service, Contact.
+Home page matches the structure you pointed out:
+- pill navigation
+- centered photo + name + title
+- 3 city cards
+- contact block with circular icons
 
-## Edit content
-- Main page: `index.html`
-- Styling: `assets/css/style.css`
+Edit:
+- `index.html` for Home
+- `about.html`, `projects.html`, ... for other sections
+- `assets/css/style.css` for styling
 
-## Add your photo
-1. Put your photo in `assets/images/` as `profile.jpg` (square works best).
-2. In `index.html`, change:
-   `src="assets/images/profile.svg"` -> `src="assets/images/profile.jpg"`
-3. Commit + Push via GitHub Desktop.
+Replace images:
+- Profile: put your photo at `assets/images/profile.jpg` and change `index.html` from `profile.svg` to `profile.jpg`
+- Cities: replace the files in `assets/images/cities/` with your own photos (keep names or update `<img src>`)
 
-## Deploy
-Use GitHub Pages (Settings → Pages → Deploy from branch → main → /(root)).
+Deploy:
+GitHub repo → Settings → Pages → Deploy from branch → main → /(root)
