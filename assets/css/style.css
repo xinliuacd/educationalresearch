@@ -318,4 +318,58 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation M
   color: #374151;
 }
 
+/* ===== Content pages (e.g., Publications) ===== */
+.page-title{
+  margin: 72px 0 0;     /* 大标题前空两行的感觉 */
+  font-size: 24px;
+  letter-spacing: .10em;
+  text-transform: uppercase;
+  color: #111827;
+}
+
+.page-subtitle{
+  margin: 10px auto 26px;
+  max-width: 920px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.section{
+  max-width: 920px;
+  margin: 26px auto 0;
+  text-align: left;    /* 先左对齐，条目内部再两端齐 */
+}
+
+.section-title{
+  margin: 0 0 12px;
+  font-size: 13px;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  color: #374151;
+}
+
+.pub-list{
+  margin: 0;
+  padding-left: 18px;
+}
+
+.pub-list li{
+  margin: 10px 0;
+  line-height: 1.85;
+
+  /* 你要的两端对齐 */
+  text-align: justify;
+  text-justify: inter-word;
+
+  /* 英文更自然的断词 */
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
+
+.pub-list em{ font-style: italic; }
+
+.pub-list a{
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
 
