@@ -43,14 +43,19 @@ a{color:inherit;text-decoration:none}
   font-family: system-ui,-apple-system,"Segoe UI",Roboto,Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
 }
 
-/* --- top nav --- */
+/* --- top nav (aligned rows) --- */
 .pillnav{
   display:flex;
-  justify-content:center;
   flex-wrap:wrap;
   gap:14px;
   margin:0 auto 22px;
-  max-width: 980px;   /* 关键：限制宽度，让换行更自然 */
+  max-width: 980px;
+
+  /* 关键：让换行后的每一行都从同一边界开始 */
+  justify-content:flex-start;
+
+  /* 关键：让整块导航居中，但行内是左对齐 */
+  width: fit-content;
 }
 
 .pillnav a{
@@ -66,6 +71,37 @@ a{color:inherit;text-decoration:none}
   text-transform:none;
   color:#374151;
   white-space:nowrap;
+}
+
+/* EN label keeps Diego-like style */
+.pillnav a .en{
+  font-size:12px;
+  letter-spacing:.30em;
+  text-transform:uppercase;
+  color:#374151;
+}
+
+/* ZH label: no uppercase/spacing */
+.pillnav a .zh{
+  margin-top:0;
+  font-size:11px;
+  letter-spacing:0;
+  text-transform:none;
+  color:var(--muted);
+  line-height:1.2;
+}
+
+.pillnav a:hover{background:var(--pill-hover)}
+.pillnav a.active{border-color:#9ca3af}
+
+/* responsive: small screens keep it centered */
+@media (max-width:860px){
+  .pillnav{
+    width: 100%;
+    justify-content:center;
+  }
+  .pillnav a{padding:10px 14px}
+  .pillnav a .en{letter-spacing:.22em}
 }
 
 
