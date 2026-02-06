@@ -237,8 +237,8 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation M
 
 .pagetitle{
   margin: 0;
-  font-size: 18px;
-  letter-spacing: .28em;
+  font-size: 26px;
+  letter-spacing: .10em;
   text-transform: uppercase;
   color: #111827;
 }
