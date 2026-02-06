@@ -2,50 +2,163 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Collaborations | Liu Xin</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Xin Liu • Collaborations</title>
+
+  <!-- 你的全站样式 -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- 本页补充样式（不改你其他页面） -->
+  <style>
+    .page-title{
+      margin:44px 0 6px;
+      text-align:center;
+      font-size:28px;
+      font-weight:600;
+      letter-spacing:.20em;
+      text-transform:uppercase;
+      color:#111827;
+    }
+    .page-subtitle{
+      margin:0 0 18px;
+      text-align:center;
+      color:#6b7280;
+      font-size:14px;
+      line-height:1.7;
+    }
+
+    .map-card{
+      margin:18px auto 26px;
+      width:min(980px,100%);
+      border:1px solid var(--line);
+      border-radius:14px;
+      background:#f9fafb;
+      padding:14px;
+    }
+    .map-svg{
+      width:100%;
+      height:auto;
+      display:block;
+      border-radius:10px;
+      background:#fff;
+    }
+    /* 让你这张黑底地图变成“白底灰陆地”风格（更贴合你网页） */
+    .map-image{
+      filter: invert(1) brightness(.95) contrast(1.05);
+      opacity:.98;
+    }
+
+    .countries{
+      width:min(980px,100%);
+      margin:0 auto 18px;
+      text-align:center;
+    }
+    .countries h3{
+      margin:0 0 10px;
+      font-size:14px;
+      letter-spacing:.22em;
+      text-transform:uppercase;
+      color:#111827;
+      font-weight:600;
+    }
+    .country-list{
+      list-style:none;     /* 去掉黑点 */
+      padding:0;
+      margin:0 auto;
+      display:inline-block;
+      text-align:left;
+      line-height:2.0;
+      color:#111827;
+      font-size:14px;
+    }
+
+    .footer-note{
+      margin:18px 0 0;
+      text-align:center;
+      color:#6b7280;
+      font-size:13px;
+    }
+    .footer-note a{ text-decoration:none; }
+    .footer-note a:hover{ text-decoration:underline; }
+  </style>
 </head>
 
 <body>
   <main class="wrap">
 
-    <!-- TOP MENU -->
-    <nav class="pillnav" aria-label="Primary">
+    <!-- 顶部导航：把 Collaborations 设为 active -->
+    <nav class="pillnav" aria-label="Primary navigation">
       <a href="index.html"><span class="en">Home</span></a>
-      <a href="academic.html"><span class="en">Academic Career</span></a>
-      <a href="projects.html"><span class="en">Projects and Grants</span></a>
+      <a href="academic-career.html"><span class="en">Academic Career</span></a>
+      <a href="projects-and-grants.html"><span class="en">Projects and Grants</span></a>
       <a href="publications.html"><span class="en">Publications</span></a>
       <a href="awards.html"><span class="en">Awards</span></a>
       <a href="presentations.html"><span class="en">Presentations</span></a>
       <a href="teaching.html"><span class="en">Teaching</span></a>
       <a href="supervision.html"><span class="en">Supervision</span></a>
-      <a href="service.html"><span class="en">Academic Service</span></a>
-      <a href="collaborations.html" class="active"><span class="en">Collaborations</span></a>
+      <a href="academic-service.html"><span class="en">Academic Service</span></a>
+      <a class="active" href="collaborations.html"><span class="en">Collaborations</span></a>
     </nav>
 
     <div class="rule" aria-hidden="true"></div>
 
-    <h1 class="page-title">COLLABORATIONS</h1>
+    <h1 class="page-title">Collaborations</h1>
     <p class="page-subtitle">International collaboration footprint starting from Ningbo, China.</p>
 
-    <!-- MAP CARD -->
-    <section class="card" aria-label="Collaboration map">
-      <div class="map-wrap">
-        <!-- IMPORTANT: do NOT use object-fit:cover anywhere on this image -->
-        <img
-          id="worldMap"
-          class="map-img"
-          src="assets/images/map.png"
-          alt="World map"
-        />
-        <svg id="mapSvg" class="map-overlay" aria-hidden="true"></svg>
-      </div>
+    <!-- 地图（SVG 内嵌图片 + 箭头路径，保证比例一致、不会跑版） -->
+    <section class="map-card" aria-label="Collaboration map">
+      <svg class="map-svg" viewBox="0 0 928 391" role="img" aria-label="World map with collaboration routes">
+        <defs>
+          <!-- 箭头样式 -->
+          <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+            <path d="M0,0 L10,5 L0,10 Z" fill="#64748b" opacity="0.85"></path>
+          </marker>
+        </defs>
+
+        <!-- ✅ 改这里：把 images/map.png 换成你真实路径 -->
+        <image class="map-image" href="images/map.png" x="0" y="0" width="928" height="391" preserveAspectRatio="none"></image>
+
+        <!-- 路径（已按你的 map.png 928×391 校准；不画目的地黑点，只保留箭头与 Ningbo） -->
+        <g fill="none" stroke="#64748b" stroke-width="2.2" opacity="0.78" marker-end="url(#arrow)">
+          <!-- Sweden (Stockholm) -->
+          <path d="M 777.4 118.2 Q 648.4 0.8 510.6 42.0"></path>
+          <!-- Norway (Oslo) -->
+          <path d="M 777.4 118.2 Q 654.9 7.2 491.7 40.5"></path>
+          <!-- Finland (Helsinki) -->
+          <path d="M 777.4 118.2 Q 667.0 1.4 528.3 39.8"></path>
+          <!-- Belgium (Ghent) -->
+          <path d="M 777.4 118.2 Q 642.4 33.6 473.6 63.1"></path>
+          <!-- Germany (Hamburg) -->
+          <path d="M 777.4 118.2 Q 655.0 28.2 489.8 56.6"></path>
+          <!-- Netherlands (Amsterdam) -->
+          <path d="M 777.4 118.2 Q 643.7 31.1 476.6 60.1"></path>
+          <!-- Portugal (Lisbon) -->
+          <path d="M 777.4 118.2 Q 636.3 58.9 440.4 95.7"></path>
+          <!-- Serbia (Belgrade) -->
+          <path d="M 777.4 118.2 Q 667.3 37.6 516.7 81.5"></path>
+          <!-- Estonia (Tallinn) -->
+          <path d="M 777.4 118.2 Q 666.8 4.5 527.8 41.8"></path>
+          <!-- United Kingdom (London) -->
+          <path d="M 777.4 118.2 Q 640.2 33.8 463.7 61.0"></path>
+          <!-- United States (Iowa City) -->
+          <path d="M 777.4 118.2 Q 564.4 -3.9 227.9 87.9"></path>
+          <!-- Singapore -->
+          <path d="M 777.4 118.2 Q 741.8 190.1 731.6 192.7"></path>
+        </g>
+
+        <!-- Ningbo 点与标注（只保留这个点） -->
+        <g>
+          <circle cx="777.4" cy="118.2" r="4.6" fill="#111827"></circle>
+          <text x="788" y="114" font-size="12" fill="#111827" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial">
+            Ningbo
+          </text>
+        </g>
+      </svg>
     </section>
 
-    <!-- LIST CARD -->
-    <section class="card" aria-label="Key collaboration countries/regions">
-      <h2 class="subsection-title">Key collaboration countries/regions</h2>
+    <!-- 国家列表：无黑点 + 按你指定顺序 -->
+    <section class="countries" aria-label="Key collaboration countries/regions">
+      <h3>Key collaboration countries/regions</h3>
       <ul class="country-list">
         <li>Sweden</li>
         <li>Norway</li>
@@ -62,7 +175,7 @@
       </ul>
     </section>
 
-    <!-- CONTACT (keep your original block) -->
+    <!-- 你要求：每页末尾都加 Contact + 预约按钮 -->
     <div class="rule" aria-hidden="true"></div>
 
     <h2 class="contact-title">Contact</h2>
@@ -70,15 +183,11 @@
 
     <div class="icons" aria-label="Contact links">
       <a class="icon" href="mailto:liuxin2@nbu.edu.cn" aria-label="Email">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"/>
-        </svg>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"/></svg>
       </a>
 
       <a class="icon" href="https://jsjy.nbu.edu.cn/info/1059/110251.htm" target="_blank" rel="noreferrer" aria-label="Ningbo University Profile">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3Zm0 14L5 13.2V16c0 2.2 3.1 4 7 4s7-1.8 7-4v-2.8L12 17Z"/>
-        </svg>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3Zm0 14L5 13.2V16c0 2.2 3.1 4 7 4s7-1.8 7-4v-2.8L12 17Z"/></svg>
       </a>
 
       <a class="icon icon-rg" href="https://www.researchgate.net/profile/Xin-Liu-27" target="_blank" rel="noreferrer" aria-label="ResearchGate">
@@ -90,15 +199,11 @@
       </a>
 
       <a class="icon" href="https://orcid.org/0000-0002-2314-9786" target="_blank" rel="noreferrer" aria-label="ORCID">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M7.2 3.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4Zm-2 4h4v13h-4v-13Zm7 0h5.3c4 0 6.5 2.5 6.5 6.5s-2.5 6.5-6.5 6.5H12.2v-13Zm4.9 10.1c1.8 0 3-1.2 3-3.6s-1.2-3.6-3-3.6h-.9v7.2h.9Z"/>
-        </svg>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.2 3.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4Zm-2 4h4v13h-4v-13Zm7 0h5.3c4 0 6.5 2.5 6.5 6.5s-2.5 6.5-6.5 6.5H12.2v-13Zm4.9 10.1c1.8 0 3-1.2 3-3.6s-1.2-3.6-3-3.6h-.9v7.2h.9Z"/></svg>
       </a>
 
       <a class="icon" href="https://www.linkedin.com/in/xin-liu-aa878a110/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M4.98 3.5A2.48 2.48 0 1 1 5 8.46 2.48 2.48 0 0 1 4.98 3.5ZM3 21h4V9H3v12Zm7 0h4v-6.2c0-1.7.03-3.9 2.4-3.9 2.4 0 2.4 1.9 2.4 4V21h4v-6.9c0-4-0.9-7.1-5.6-7.1-2.2 0-3.7 1.2-4.3 2.3h-.1V9h-3.8v12Z"/>
-        </svg>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5A2.48 2.48 0 1 1 5 8.46 2.48 2.48 0 0 1 4.98 3.5ZM3 21h4V9H3v12Zm7 0h4v-6.2c0-1.7.03-3.9 2.4-3.9 2.4 0 2.4 1.9 2.4 4V21h4v-6.9c0-4-0.9-7.1-5.6-7.1-2.2 0-3.7 1.2-4.3 2.3h-.1V9h-3.8v12Z"/></svg>
       </a>
     </div>
 
@@ -111,143 +216,10 @@
       </a>
     </div>
 
+    </p>
     <div class="rule" aria-hidden="true"></div>
     <p class="footer-note"><a href="index.html">Back to Home</a></p>
 
   </main>
-
-  <script>
-    (() => {
-      const img = document.getElementById("worldMap");
-      const svg = document.getElementById("mapSvg");
-      const NS = "http://www.w3.org/2000/svg";
-
-      /* ===========
-         Alignment knobs
-         If the Ningbo point looks slightly east/west or high/low,
-         only tweak these numbers (NOT the coordinates).
-         =========== */
-      const LON_SHIFT = 0;   // degrees. Try -2, -3 if it looks too far east (toward Japan).
-      const LAT_MAX = 84;    // top latitude shown by your map image
-      const LAT_MIN = -58;   // bottom latitude shown by your map image
-
-      const origin = { name: "Ningbo", lat: 29.8683, lon: 121.5440 };
-
-      // Use representative city coordinates (capitals) for each country
-      const targets = [
-        { name: "Sweden",         lat: 59.3293, lon: 18.0686 },    // Stockholm
-        { name: "Norway",         lat: 59.9139, lon: 10.7522 },    // Oslo
-        { name: "Finland",        lat: 60.1699, lon: 24.9384 },    // Helsinki
-        { name: "Belgium",        lat: 50.8503, lon: 4.3517 },     // Brussels
-        { name: "Germany",        lat: 52.5200, lon: 13.4050 },    // Berlin
-        { name: "Netherlands",    lat: 52.3676, lon: 4.9041 },     // Amsterdam
-        { name: "Portugal",       lat: 38.7223, lon: -9.1393 },    // Lisbon
-        { name: "Serbia",         lat: 44.7866, lon: 20.4489 },    // Belgrade
-        { name: "Estonia",        lat: 59.4370, lon: 24.7536 },    // Tallinn
-        { name: "United Kingdom", lat: 51.5074, lon: -0.1278 },    // London
-        { name: "United States",  lat: 38.9072, lon: -77.0369 },   // Washington, DC
-        { name: "Singapore",      lat: 1.3521,  lon: 103.8198 }    // Singapore
-      ];
-
-      function clearSvg() {
-        while (svg.firstChild) svg.removeChild(svg.firstChild);
-      }
-
-      function draw() {
-        const w = img.naturalWidth;
-        const h = img.naturalHeight;
-        if (!w || !h) return;
-
-        svg.setAttribute("viewBox", `0 0 ${w} ${h}`);
-        svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
-        clearSvg();
-
-        // Arrow marker
-        const defs = document.createElementNS(NS, "defs");
-        const marker = document.createElementNS(NS, "marker");
-        marker.setAttribute("id", "arrow");
-        marker.setAttribute("viewBox", "0 0 10 10");
-        marker.setAttribute("refX", "9");
-        marker.setAttribute("refY", "5");
-        marker.setAttribute("markerWidth", "6");
-        marker.setAttribute("markerHeight", "6");
-        marker.setAttribute("orient", "auto");
-
-        const arrow = document.createElementNS(NS, "path");
-        arrow.setAttribute("d", "M 0 0 L 10 5 L 0 10 z");
-        arrow.setAttribute("fill", "#94a3b8");
-        arrow.setAttribute("opacity", "0.75");
-
-        marker.appendChild(arrow);
-        defs.appendChild(marker);
-        svg.appendChild(defs);
-
-        const lonToX = (lon) => ((lon + LON_SHIFT + 180) / 360) * w;
-        const latToY = (lat) => ((LAT_MAX - lat) / (LAT_MAX - LAT_MIN)) * h;
-
-        const x1 = lonToX(origin.lon);
-        const y1 = latToY(origin.lat);
-
-        // Ningbo dot
-        const dot = document.createElementNS(NS, "circle");
-        dot.setAttribute("cx", x1);
-        dot.setAttribute("cy", y1);
-        dot.setAttribute("r", "3.2");
-        dot.setAttribute("fill", "#111827");
-        dot.setAttribute("opacity", "0.92");
-        svg.appendChild(dot);
-
-        // Ningbo label
-        const label = document.createElementNS(NS, "text");
-        label.textContent = origin.name;
-        label.setAttribute("x", x1 + 8);
-        label.setAttribute("y", y1 - 8);
-        label.setAttribute("font-size", "12");
-        label.setAttribute("font-family", "system-ui, -apple-system, Segoe UI, Roboto, Arial");
-        label.setAttribute("fill", "#111827");
-        svg.appendChild(label);
-
-        // Arcs (no target dots)
-        targets.forEach((t) => {
-          const x2 = lonToX(t.lon);
-          const y2 = latToY(t.lat);
-
-          const dx = x2 - x1;
-          const dy = y2 - y1;
-          const dist = Math.hypot(dx, dy) || 1;
-
-          const mx = (x1 + x2) / 2;
-          const my = (y1 + y2) / 2;
-
-          const nx = -dy / dist;
-          const ny = dx / dist;
-
-          const lift = Math.min(95, Math.max(30, dist * 0.18));
-
-          let cx = mx + nx * lift;
-          let cy = my + ny * lift;
-
-          // Prefer upward arc (smaller y)
-          if (cy > my) {
-            cx = mx - nx * lift;
-            cy = my - ny * lift;
-          }
-
-          const path = document.createElementNS(NS, "path");
-          path.setAttribute("d", `M ${x1} ${y1} Q ${cx} ${cy} ${x2} ${y2}`);
-          path.setAttribute("fill", "none");
-          path.setAttribute("stroke", "#94a3b8");
-          path.setAttribute("stroke-width", "1.4");
-          path.setAttribute("stroke-linecap", "round");
-          path.setAttribute("opacity", "0.75");
-          path.setAttribute("marker-end", "url(#arrow)");
-          svg.appendChild(path);
-        });
-      }
-
-      if (img.complete) draw();
-      else img.addEventListener("load", draw);
-    })();
-  </script>
 </body>
 </html>
