@@ -38,6 +38,11 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation M
   color: #111827;
 }
 
+.about-title{
+  /* 你原来的设置保留 */
+  margin-top: 68px;
+}
+
 .about-tagline{
   margin: 12px 0 0;
   text-align: center;
@@ -45,6 +50,7 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation M
   font-size: 16px;            /* 更大 */
   line-height: 1.8;
 }
+
 
 /* 正文：两端对齐 + 更大字号 */
 .about-text{
