@@ -1,19 +1,21 @@
-// Tiny scroll-spy for nav highlighting
+// Active nav highlighting (simple)
 (() => {
-  const links = Array.from(document.querySelectorAll('.nav-links a[href^="#"]'));
-  const sections = links
+  const navLinks = Array.from(document.querySelectorAll('.nav a'));
+  const sections = navLinks
     .map(a => document.querySelector(a.getAttribute('href')))
     .filter(Boolean);
 
-  const setActive = () => {
+  const onScroll = () => {
     const y = window.scrollY + 90;
-    let activeId = sections[0]?.id || '';
+    let current = sections[0]?.id;
     for (const s of sections) {
-      if (s.offsetTop <= y) activeId = s.id;
+      if (s.offsetTop <= y) current = s.id;
     }
-    links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === `#${activeId}`));
+    navLinks.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    });
   };
 
-  window.addEventListener('scroll', setActive, { passive: true });
-  window.addEventListener('load', setActive);
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
 })();

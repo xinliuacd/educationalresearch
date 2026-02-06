@@ -1,20 +1,17 @@
-# Xin Liu — single-page academic site (Diego-like structure)
+# Xin Liu — Diego-aligned single-page site (static)
 
-This is a *static* website (HTML/CSS/JS). No Hugo/Jekyll build steps.
+This is a lightweight static site for GitHub Pages, aligned with the section naming & order used on diegocampos.co:
+Home, About, Projects, Publications, Awards and Grants, Presentations, Teaching, Supervision, Academic Service, Contact.
 
 ## Edit content
-Open `index.html` and edit text in each `<section>` (About / Projects / Publications / ...).
+- Main page: `index.html`
+- Styling: `assets/css/style.css`
 
-## Replace the avatar
-Replace `assets/images/avatar.png` with your own photo (keep the same filename).
+## Add your photo
+1. Put your photo in `assets/images/` as `profile.jpg` (square works best).
+2. In `index.html`, change:
+   `src="assets/images/profile.svg"` -> `src="assets/images/profile.jpg"`
+3. Commit + Push via GitHub Desktop.
 
-## Deploy on GitHub Pages
-Repository → **Settings** → **Pages**
-- Source: **Deploy from a branch**
-- Branch: **main** / **(root)**
-Then visit:
-- `https://<username>.github.io/<repo>/` (project site)
-or set a custom domain.
-
-## Custom domain (optional)
-After you buy a domain (e.g., `xinliu.me`), add it in GitHub Pages and set DNS records at your domain registrar.
+## Deploy
+Use GitHub Pages (Settings → Pages → Deploy from branch → main → /(root)).
