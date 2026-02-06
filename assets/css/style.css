@@ -1,0 +1,193 @@
+/* Minimal one-page academic site (GitHub Pages ready) */
+:root{
+  --bg:#ffffff;
+  --text:#111827;
+  --muted:#6b7280;
+  --line:#e5e7eb;
+  --card:#f9fafb;
+  --link:#111827;
+  --linkHover:#2563eb;
+  --shadow: 0 10px 30px rgba(0,0,0,.06);
+  --radius: 16px;
+  --sidebarW: 320px;
+  --maxW: 1024px;
+  --pad: 20px;
+  --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:var(--font);
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+
+.skip-link{
+  position:absolute; left:-9999px; top:auto;
+  width:1px; height:1px; overflow:hidden;
+}
+.skip-link:focus{
+  left:12px; top:12px; width:auto; height:auto;
+  padding:10px 12px; background:#fff;
+  border:1px solid var(--line); border-radius:10px; z-index:9999;
+}
+
+.sidebar{
+  position:fixed;
+  inset:0 auto 0 0;
+  width:var(--sidebarW);
+  border-right:1px solid var(--line);
+  background:var(--bg);
+}
+.sidebar-inner{
+  height:100%;
+  overflow:auto;
+  padding:28px 22px;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+.avatar{
+  width:74px; height:74px;
+  border-radius:999px;
+  overflow:hidden;
+  background:var(--card);
+  border:1px solid var(--line);
+}
+.avatar img{width:100%; height:100%; object-fit:cover; display:block}
+
+.identity .name{
+  margin:0;
+  letter-spacing:.06em;
+  font-size:22px;
+}
+.identity .tagline{margin:6px 0 0; color:var(--muted)}
+.identity .affil{margin:6px 0 0; color:var(--muted); font-size:14px}
+
+.nav{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  padding-top:10px;
+  border-top:1px solid var(--line);
+}
+.nav a{
+  text-decoration:none;
+  color:var(--link);
+  padding:8px 10px;
+  border-radius:12px;
+  border:1px solid transparent;
+}
+.nav a:hover{color:var(--linkHover); border-color:var(--line); background:var(--card)}
+.nav a.active{border-color:var(--line); background:var(--card)}
+
+.sidebar-footer{
+  margin-top:auto;
+  padding-top:16px;
+  border-top:1px solid var(--line);
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+.social{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px 12px;
+}
+.social a{
+  font-size:13px;
+  color:var(--muted);
+  text-decoration:none;
+  border-bottom:1px dotted transparent;
+}
+.social a:hover{color:var(--linkHover); border-bottom-color:var(--linkHover)}
+.theme-btn{
+  padding:10px 12px;
+  border-radius:12px;
+  border:1px solid var(--line);
+  background:var(--bg);
+  cursor:pointer;
+  text-align:left;
+}
+.theme-btn:hover{background:var(--card)}
+
+.content{
+  margin-left:var(--sidebarW);
+  padding:32px 22px 60px;
+}
+.section{
+  max-width:var(--maxW);
+  padding:22px 0;
+  border-bottom:1px solid var(--line);
+}
+.section h2{
+  margin:0 0 10px;
+  font-size:18px;
+  letter-spacing:.02em;
+}
+.muted{color:var(--muted)}
+.cards{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+  margin-top:14px;
+}
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:16px;
+  box-shadow:var(--shadow);
+}
+.card h3{margin:0 0 8px; font-size:15px}
+.card ul{margin:0; padding-left:18px}
+
+.item{
+  padding:14px 16px;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  background:var(--bg);
+  box-shadow:var(--shadow);
+  margin:12px 0;
+}
+.item h3{margin:0 0 6px; font-size:15px}
+.item p{margin:0; color:var(--muted)}
+
+.list{margin:0; padding-left:18px}
+.pubs{margin:0; padding-left:18px}
+.pubs li{margin:12px 0}
+.pub-title{display:block; font-weight:600}
+.pub-venue{display:block; color:var(--muted)}
+.pub-link{display:inline-block; margin-top:4px; font-size:13px}
+
+.footer{
+  max-width:var(--maxW);
+  padding:24px 0 0;
+  color:var(--muted);
+}
+
+/* Responsive */
+@media (max-width: 980px){
+  .sidebar{
+    position:static;
+    width:100%;
+    border-right:none;
+    border-bottom:1px solid var(--line);
+  }
+  .sidebar-inner{flex-direction:row; align-items:center; gap:14px}
+  .identity{min-width:200px}
+  .nav{
+    flex-direction:row;
+    flex-wrap:wrap;
+    border-top:none;
+    padding-top:0;
+    gap:8px;
+  }
+  .sidebar-footer{border-top:none; padding-top:0; margin-top:0}
+  .content{margin-left:0}
+  .cards{grid-template-columns:1fr}
+}
