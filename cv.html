@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Xin Liu • Academic CV</title>
+  <meta name="description" content="Xin Liu — Associate Professor (Ningbo University). Educational psychology, mathematics education, teacher education, and large-scale assessment (PISA/TALIS/TIMSS)." />
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#0f172a;
+      --muted:#475569;
+      --muted2:#64748b;
+      --line:#e2e8f0;
+      --card:#f8fafc;
+      --link:#2563eb;
+      --shadow: 0 10px 25px rgba(2,6,23,.08);
+      --sidebar: 280px;
+      --radius: 16px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:var(--sans);
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.55;
+    }
+    a{color:var(--link); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .layout{display:flex; min-height:100vh}
+    .sidebar{
+      width:var(--sidebar);
+      border-right:1px solid var(--line);
+      padding:28px 22px;
+      position:sticky;
+      top:0;
+      align-self:flex-start;
+      height:100vh;
+      overflow:auto;
+      background:#fff;
+    }
+    .main{
+      flex:1;
+      padding:34px 26px 80px;
+      max-width: 980px;
+    }
+    .avatar{
+      width:86px; height:86px;
+      border-radius:50%;
+      background:linear-gradient(135deg, #e2e8f0, #f1f5f9);
+      display:grid; place-items:center;
+      font-weight:700;
+      letter-spacing:.08em;
+      color:#334155;
+      margin-bottom:14px;
+      user-select:none;
+    }
+    .name{font-size:28px; font-weight:800; letter-spacing:.02em; margin:0}
+    .role{margin:6px 0 0; color:var(--muted); font-size:14px}
+    .org{margin:6px 0 0; color:var(--muted2); font-size:13px}
+    .mini{
+      margin-top:18px;
+      padding-top:18px;
+      border-top:1px solid var(--line);
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+    .pill{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      padding:8px 10px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background:#fff;
+      font-size:13px;
+      color:var(--muted);
+      cursor:pointer;
+      width:max-content;
+    }
+    .pill:hover{box-shadow: 0 6px 18px rgba(2,6,23,.07)}
+    nav{margin-top:22px}
+    nav a{
+      display:block;
+      padding:10px 12px;
+      border-radius:10px;
+      color:var(--muted);
+      font-weight:600;
+      font-size:14px;
+    }
+    nav a:hover{background:var(--card); color:var(--text); text-decoration:none}
+    nav a.active{background:var(--card); color:var(--text)}
+    .links{
+      margin-top:22px;
+      padding-top:18px;
+      border-top:1px solid var(--line);
+      display:grid;
+      gap:8px;
+      font-size:13px;
+      color:var(--muted);
+    }
+    .links a{color:var(--muted)}
+    .links a:hover{color:var(--text); text-decoration:none}
+    .section{
+      scroll-margin-top: 18px;
+      padding-top:14px;
+      margin-top:22px;
+      border-top:1px solid var(--line);
+    }
+    .section:first-of-type{border-top:0; margin-top:0; padding-top:0}
+    h2{
+      font-size:18px;
+      margin:0 0 10px;
+      letter-spacing:.01em;
+    }
+    p{margin:0 0 12px}
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+    }
+    .card{
+      border:1px solid var(--line);
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:14px 16px;
+    }
+    .kicker{
+      font-family:var(--mono);
+      color:var(--muted2);
+      font-size:12px;
+      margin-bottom:6px;
+    }
+    ul{margin:0; padding-left:18px}
+    li{margin:6px 0}
+    .item{
+      padding:14px 16px;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:#fff;
+      margin:10px 0;
+    }
+    .item h3{margin:0; font-size:15px}
+    .meta{color:var(--muted); font-size:13px; margin-top:6px}
+    .meta span{display:inline-block; margin-right:10px}
+    .tag{
+      display:inline-block;
+      font-size:12px;
+      padding:2px 8px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      color:var(--muted);
+      background:#fff;
+      margin-left:8px;
+      vertical-align:middle;
+    }
+    details{
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:#fff;
+      padding:10px 12px;
+      margin:10px 0;
+    }
+    summary{
+      cursor:pointer;
+      font-weight:700;
+      color:var(--text);
+      list-style:none;
+    }
+    summary::-webkit-details-marker{display:none}
+    .note{color:var(--muted2); font-size:13px}
+    .foot{margin-top:22px; color:var(--muted2); font-size:12px}
+    @media (max-width: 980px){
+      .layout{flex-direction:column}
+      .sidebar{
+        width:100%;
+        height:auto;
+        position:relative;
+        border-right:0;
+        border-bottom:1px solid var(--line);
+      }
+      .main{padding:24px 18px 70px}
+      .grid{grid-template-columns: 1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="avatar" aria-hidden="true">XL</div>
+      <h1 class="name">XIN&nbsp;LIU</h1>
+      <div class="role">Associate Professor • Educational Researcher</div>
+      <div class="org">College of Teacher Education, Ningbo University</div>
+
+      <div class="mini">
+        <button class="pill" id="copyEmail" type="button" title="Copy email">
+          <span>Copy email</span>
+          <span style="font-family:var(--mono);font-size:12px;color:var(--muted2)">liuxin2@nbu.edu.cn</span>
+        </button>
+        <div class="note">Full CV page for GitHub Pages (single HTML file). Replace “XL” with a profile photo later if you wish.</div>
+      </div>
+
+      <nav aria-label="Sections">
+        <a href="#about">About</a>
+        <a href="#appointments">Appointments</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects & Grants</a>
+        <a href="#publications">Publications</a>
+        <a href="#presentations">Presentations</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#service">Academic Service</a>
+        <a href="#development">Professional Development</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="links">
+        <div><a href="https://jsjy.nbu.edu.cn/info/1059/110251.htm" target="_blank" rel="noreferrer">University profile</a></div>
+        <div><a href="https://www.researchgate.net/profile/Xin-Liu-27" target="_blank" rel="noreferrer">ResearchGate</a></div>
+        <div><a href="https://scholar.google.com/citations?hl=en&user=YaY3FpsAAAAJ" target="_blank" rel="noreferrer">Google Scholar</a></div>
+        <div><a href="https://orcid.org/0000-0002-3823-1701" target="_blank" rel="noreferrer">ORCID</a></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <section class="section" id="about">
+        <h2>About</h2>
+        <p>Hello! I am <strong>Dr Xin Liu</strong>, Associate Professor and Master’s Supervisor at the College of Teacher Education, Ningbo University. My research sits at the intersection of <em>educational psychology</em>, <em>mathematics education</em>, <em>teacher education</em>, and <em>international comparative education</em>, with a strong focus on using large-scale assessment and survey data (e.g., <strong>PISA</strong>, <strong>TALIS</strong>, <strong>TIMSS</strong>).</p>
+        <div class="grid">
+          <div class="card">
+            <div class="kicker">Research interests</div>
+            <ul>
+              <li>Teaching quality and instructional practices</li>
+              <li>Student motivation, emotions (e.g., anxiety), and well-being</li>
+              <li>Educational equity and digital inclusion</li>
+              <li>Teacher professional development and evaluation</li>
+              <li>Cross-national and cross-cultural comparison</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="kicker">Methods</div>
+            <ul>
+              <li>Structural equation modelling (SEM) & latent variable models</li>
+              <li>Multilevel modelling & cross-level interactions</li>
+              <li>Measurement invariance and scale validation</li>
+              <li>Mediation/moderation and conditional process models</li>
+              <li>Trend and longitudinal analyses (including PV/weight handling)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="appointments">
+        <h2>Appointments</h2>
+
+        <div class="item">
+          <h3>Associate Professor & Master’s Supervisor <span class="tag">since Dec 2024</span></h3>
+          <div class="meta"><span>Ningbo University, China</span> <span>College of Teacher Education</span></div>
+          <ul>
+            <li>Baoyugang “Young Top Talent” (Youth Excellence Programme).</li>
+            <li>Research and teaching in educational psychology, teacher education, and large-scale assessment analytics.</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <h3>Postdoctoral Researcher / Project Researcher <span class="tag">Nov 2022 – Nov 2024</span></h3>
+          <div class="meta"><span>University of Oslo, Norway</span> <span>Department of Teacher Education and School Research</span></div>
+          <ul>
+            <li>Norwegian team PI / coordinator for the multi-country project <em>Co-constructing mathematics motivation in primary education</em> (FINNUT 301033).</li>
+            <li>Led cross-country quantitative and qualitative analyses, and supported publications and international collaboration.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="education">
+        <h2>Education</h2>
+        <div class="item">
+          <h3>PhD in Educational Sciences <span class="tag">Jan 2019 – Sep 2022</span></h3>
+          <div class="meta"><span>Ghent University, Belgium</span> <span>Supervisor: Prof Martin Valcke (with Prof Kajsa Yang Hansen, Prof Jan De Neve)</span></div>
+          <p>Dissertation: <em>Relations among instructional quality, teacher characteristics, and student background and mathematics achievement: Linking TALIS 2013 and PISA 2012</em>.</p>
+        </div>
+        <div class="item">
+          <h3>MSc in Educational Research <span class="tag">Aug 2016 – Jul 2018</span></h3>
+          <div class="meta"><span>University of Gothenburg, Sweden</span> <span>Pass with Distinction</span></div>
+          <p>Thesis: <em>Effect of professional development and self-efficacy on teachers’ job satisfaction in Swedish lower secondary school</em>.</p>
+        </div>
+        <details>
+          <summary>Earlier degrees (BEng / BEd / BA)</summary>
+          <ul>
+            <li>BEng, Measurement & Control Technology and Instruments — Northeast Petroleum University (China), 2009–2011.</li>
+            <li>BEd (double degree), Applied Psychology — Harbin Normal University (China), 2005–2009.</li>
+            <li>BA, English Education — Harbin Normal University (China), 2005–2009.</li>
+          </ul>
+        </details>
+      </section>
+
+      <section class="section" id="projects">
+        <h2>Projects & Grants</h2>
+        <p class="note">Below is an integrated list (English CV + updated items after 2024). Major funded projects are described in more detail.</p>
+
+        <div class="item">
+          <h3>The multi-level mechanisms of digital device use on teaching quality and educational equity from a global perspective <span class="tag">PI</span></h3>
+          <div class="meta"><span>2025–2028</span> <span>National Social Science Fund of China (Education) — General Project</span> <span>Project No. BHA250113</span></div>
+          <ul>
+            <li>Builds a “digital devices → teaching quality → learning outcomes → equity” mechanism framework using global large-scale data.</li>
+            <li>Emphasises multilevel modelling, cross-country comparison, and policy-relevant interpretations for digital education.</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <h3>From Tiger Moms to Free-Range Parenting: Anxiety and Achievement among Chinese and Nordic Learners <span class="tag">PI</span></h3>
+          <div class="meta"><span>2025–2027</span> <span>Ningbo University Special Talent Project</span> <span>Project No. ZX2025000345</span></div>
+          <ul>
+            <li>Investigates how learning environments shape anxiety and achievement across Chinese and Nordic learner groups.</li>
+            <li>Combines large-scale datasets (e.g., PISA) with advanced modelling (multilevel SEM, mediation/moderation) to inform practice.</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <h3>Co-constructing mathematics motivation in primary education – A longitudinal study in six European countries <span class="tag">Norway team PI</span></h3>
+          <div class="meta"><span>2021–2024</span> <span>Research Council of Norway (FINNUT)</span> <span>Grant No. 301033</span></div>
+          <ul>
+            <li>Coordinated Norwegian team work, supported data collection/management, and led cross-country analyses and dissemination.</li>
+          </ul>
+        </div>
+
+        <details>
+          <summary>Other grants / projects (selected)</summary>
+          <ul>
+            <li><strong>2024–2025</strong> International comparative analysis of digital device use and teaching quality: a dual pathway model of teaching quality and equity (Participant) — Zhejiang Provincial Philosophy and Social Sciences Planning Project (Youth), Project No. 24ZK017YB.</li>
+            <li><strong>2024–Now</strong> Patterns and support system for the academic growth of interdisciplinary doctoral students (Co-applicant/Participant) — National Social Science Fund of China (Youth Education Project; PI: Lulu Liu), Grant No. CIA24027.</li>
+            <li><strong>2020–2022</strong> Data-driven intelligent analysis and modelling of mathematics instructional quality — FWO (Flanders, Belgium), Grants V412020N and K221319N.</li>
+            <li><strong>2018–2022</strong> Linking TALIS 2013 and PISA 2012 for education intelligence evaluation (PI) — China Scholarship Council, Grant No. CSC201807930019.</li>
+            <li><strong>2016–2018</strong> Teachers’ professional development and data-driven evaluation (PI) — Swedish Institute Scholarship (SISS), Ref. 15562/2016.</li>
+            <li><strong>2013–2014</strong> Study of sedimentary microfacies of Fuyu Reservoir at Aonan Region (Researcher) — Daqing Oilfield Ltd., CNPC.</li>
+            <li><strong>2012–2015</strong> Student training mode through university–industry cooperation (PI) — Daqing Vocational College & Xi’an Tongyuan Petroleum Co., Ltd.</li>
+          </ul>
+        </details>
+      </section>
+
+      <section class="section" id="publications">
+        <h2>Publications</h2>
+        <details open>
+          <summary>Refereed journal articles</summary>
+          <ul>
+            <li>Zhou, N., Liu, X.+, *, & Jin, X. (2025). A latent profile analysis of teachers’ perceptions of instruction quality and self-efficacy in Singapore: Links with teacher collaboration and job satisfaction. <em>Asia-Pacific Education Researcher</em>. https://doi.org/10.1007/s40299-025-00984-0</li>
+            <li>Huang, M., Liu, X.*, & Liu, L. (2025). Pathways to equity: How school support for digital technology use influences educational inequality based on PISA 2022. <em>International Journal of Educational Research</em>. https://doi.org/10.1016/j.ijer.2025.102643</li>
+            <li>Liu, X.*, Valcke, M., Yang Hansen, K., & De Neve, J. (2024). A decade of PISA: Student perceived instructional quality and mathematics achievement across European countries. <em>ZDM–Mathematics Education</em>, 56(5), 859–891. https://doi.org/10.1007/s11858-024-01630-7</li>
+            <li>Liu, X.*, Yang Hansen, K., De Neve, J., & Valcke, M. (2024). Teacher versus student perspectives on instructional quality in mathematics education across countries. <em>Instructional Science</em>, 52, 477–513. https://doi.org/10.1007/s11251-023-09652-6</li>
+            <li>Radišić, J., Buchholtz, N., Yang Hansen, K., Liu, X.*, & Kaarstein, H. (2024). Do teachers’ beliefs about the nature and the learning of mathematics affect student motivation and enjoyment of mathematics? <em>European Journal of Psychology of Education</em>, 39, 1587–1613. https://doi.org/10.1007/s10212-024-00809-6</li>
+            <li>Yang Hansen, K., Thorsen, C., Radišić, J., Peixoto, F., Laine, A., & Liu, X. (2024). When competence and confidence are at odds: A cross-country examination of the Dunning–Kruger effect. <em>European Journal of Psychology of Education</em>, 39, 1537–1559. https://doi.org/10.1007/s10212-024-00804-x</li>
+            <li>Zhou, N., Wang, J., Liu, X., Yang, L., & Jin, X. (2023). The digital competence of Chinese higher education students and the linkage with their career adaptability. <em>Education + Training</em>, 65(2), 939–954. https://doi.org/10.1108/ET-08-2022-0315</li>
+            <li>Chen, S.*, Ding, Y., & Liu, X. (2023). Development of the growth mindset scale: Evidence of structural validity, measurement model, direct and indirect effects in Chinese samples. <em>Current Psychology</em>, 42, 1712–1726. https://doi.org/10.1007/s12144-021-01532-x</li>
+            <li>Liu, X.*, Valcke, M., Yang Hansen, K., & De Neve, J. (2022). Does school-level instructional quality matter for school mathematics performance? Comparing teacher data across seven countries. <em>Sustainability</em>, 14(9), 5267. https://doi.org/10.3390/su14095267</li>
+            <li>Liu, X.*, Valcke, M., Yang Hansen, K., & De Neve, J. (2022). Exploiting the linked TALIS and PISA data in examining school effects: a case study of Singapore. <em>Frontiers in Education</em>, 7. https://doi.org/10.3389/feduc.2022.912837</li>
+            <li>Yang Hansen, K., Radišić, J., Ding, Y., & Liu, X. (2022). Contextual effects on student achievement and academic self-concept in Sweden, Norway, and China. <em>Large-scale Assessments in Education</em>, 10, 16. https://doi.org/10.1186/s40536-022-00133-9</li>
+          </ul>
+          <div class="note">+ co-first author; * corresponding author (as indicated in the original CV text).</div>
+        </details>
+
+        <details>
+          <summary>Other outputs (reports, book chapter, conference proceedings)</summary>
+          <ul>
+            <li>Book chapter: Yang Hansen, K., Radišić, J., Liu, X., & Glassow, N. (2020). <em>Equity, equality and diversity in the Nordic model of education</em> (pp. 99–137). Springer. https://doi.org/10.1007/978-3-030-61648-9_5</li>
+            <li>Government reports (Chinese): education system briefs adopted by the Education Section of Chinese Embassies (Belgium, Sweden).</li>
+            <li>Conference proceedings (CPCI): INTED/EDULEARN papers on instructional quality measurement and TALIS–PISA linkage (2020–2022).</li>
+          </ul>
+        </details>
+      </section>
+
+      <section class="section" id="presentations">
+        <h2>Presentations (selected)</h2>
+        <details open>
+          <summary>Conference presentations</summary>
+          <ul>
+            <li>2025 (Aug). ECER 2025 (EERA): <em>Equity-oriented digital education models</em> (PISA 2022).</li>
+            <li>2024 (Aug). International Conference on Motivation & Emotion, Bern: <em>Gender, mathematics identity and achievement</em>.</li>
+            <li>2023 (Aug). ECER 2023, Glasgow: <em>Teacher beliefs about mathematics and student motivation across six countries</em>.</li>
+            <li>2022 (Mar). INTED 2022, Valencia: <em>Teaching practices across Confucian countries/regions</em>.</li>
+            <li>2021 (Aug). EARLI 2021, Gothenburg: <em>Teaching motivation, instructional quality, and academic achievers</em>.</li>
+          </ul>
+        </details>
+        <details>
+          <summary>Invited talks</summary>
+          <ul>
+            <li>2024. University of Hamburg (Germany): Teacher professional knowledge and students’ mathematics identity/performance.</li>
+            <li>2023–2022. University of Oslo (Norway) & Ghent University (Belgium): teacher beliefs, motivation, and measurement work.</li>
+          </ul>
+        </details>
+      </section>
+
+      <section class="section" id="teaching">
+        <h2>Teaching (selected)</h2>
+        <div class="item">
+          <h3>Core areas</h3>
+          <ul>
+            <li>Educational psychology; mathematics education; teacher education; international comparative education</li>
+            <li>Educational measurement, statistics, and large-scale assessment analytics (PISA/TALIS/TIMSS)</li>
+          </ul>
+          <p class="note">For earlier teaching roles and detailed course lists, please see the original CV versions.</p>
+        </div>
+      </section>
+
+      <section class="section" id="service">
+        <h2>Academic service</h2>
+        <div class="item">
+          <h3>Journal reviewing (selected)</h3>
+          <ul>
+            <li><em>Studies in Educational Evaluation</em>; <em>Social Psychology of Education</em>; <em>European Journal of Psychology of Education</em></li>
+            <li><em>Psychology in the Schools</em>; <em>European Journal of Developmental Psychology</em>; <em>Large-scale Assessments in Education</em></li>
+          </ul>
+        </div>
+        <details>
+          <summary>Membership & conference reviewing</summary>
+          <ul>
+            <li>Nordic Education Research Association (NERA).</li>
+            <li>Reviewer for ECER (EERA) and EARLI conference submissions.</li>
+          </ul>
+        </details>
+      </section>
+
+      <section class="section" id="development">
+        <h2>Professional development (selected)</h2>
+        <ul>
+          <li>2025. Workshops on latent variable modelling, multilevel SEM, and PISA 2022 analysis (including PV/weights handling).</li>
+          <li>2025. Training on AI-assisted educational data analysis and introductory Python/R workflows for education research.</li>
+        </ul>
+      </section>
+
+      <section class="section" id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:liuxin2@nbu.edu.cn">liuxin2@nbu.edu.cn</a> • <a href="mailto:xin.liu.edu@outlook.com">xin.liu.edu@outlook.com</a></p>
+        <p class="foot">Last updated: 2026-02-06 • Prepared for GitHub Pages deployment.</p>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    // Copy email
+    document.getElementById('copyEmail').addEventListener('click', async () => {
+      const email = "liuxin2@nbu.edu.cn";
+      try {
+        await navigator.clipboard.writeText(email);
+        const btn = document.getElementById('copyEmail');
+        const old = btn.innerHTML;
+        btn.innerHTML = '<span>Copied!</span><span style="font-family:var(--mono);font-size:12px;color:var(--muted2)">'+email+'</span>';
+        setTimeout(()=>btn.innerHTML = old, 1200);
+      } catch(e) {
+        alert("Copy failed. Email: " + email);
+      }
+    });
+
+    // Active nav highlighting
+    const navLinks = Array.from(document.querySelectorAll('nav a'));
+    const sections = navLinks.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+
+    const onScroll = () => {
+      const y = window.scrollY + 120;
+      let current = sections[0]?.id;
+      for (const s of sections) {
+        if (s.offsetTop <= y) current = s.id;
+      }
+      navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + current));
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  </script>
+</body>
+</html>
