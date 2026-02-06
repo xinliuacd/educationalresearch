@@ -73,4 +73,21 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation M
 }
 .icon-rg svg { width: 18px; height: 18px; }
 .icon-rg text { letter-spacing: 0.08em; }
+.booking{
+  margin-top: 22px;
+  text-align: center;
+}
+.booking-title{
+  margin: 0;
+  font-size: 14px;
+  letter-spacing: .35em;
+  text-transform: uppercase;
+  color: #374151;
+}
+.booking-text{
+  margin: 12px 0 0;
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.8;
+}
 
